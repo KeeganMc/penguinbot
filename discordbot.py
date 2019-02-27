@@ -33,4 +33,4 @@ async def on_message(message):
     if message.content.startswith('=meme'):
         randomlist = ['https://cleanmemes.files.wordpress.com/2019/01/img_7555.jpg','https://cleanmemes.files.wordpress.com/2019/01/img_7556.jpg','https://cleanmemes.files.wordpress.com/2019/01/img_7557.jpg','https://cleanmemes.files.wordpress.com/2019/01/img_7558.jpg','https://cleanmemes.files.wordpress.com/2019/01/img_7559.jpg','https://cleanmemes.files.wordpress.com/2019/01/img_7560.jpg','https://cleanmemes.files.wordpress.com/2019/01/img_7550.jpg']
         await client.send_message(message.channel,(random.choice(randomlist)))
-client.run('TOKEN')
+client.run(os.getenv('TOKEN'))
